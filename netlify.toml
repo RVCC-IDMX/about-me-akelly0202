@@ -1,4 +1,4 @@
 [build]
-base = "AboutMe/adding-html-images-text"
+base = "About Me/adding-html-images-text"
 publish = "."
 command = ""
