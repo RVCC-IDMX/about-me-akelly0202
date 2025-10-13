@@ -1,0 +1,29 @@
+body {
+    font-family: Lato;
+    background-color: #FFEDB0;
+    color: #1B4E8F;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Delius;
+    font-size: 35pt;
+}
+
+header {
+    text-align: center;
+}
+
+#hero,
+footer {
+    padding-bottom: 5rem;
+    text-align: center;
+}
+
+#hero img {
+    width: 300px;
+}
