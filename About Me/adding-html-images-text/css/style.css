@@ -61,6 +61,7 @@ footer {
 p {
     text-align: center;
     margin-inline: 15rem;
+    color: black;
 
 }
 
@@ -110,4 +111,30 @@ p {
     width: 70%;
     margin: 3rem auto;
     background-color: #1B4E8F;
+}
+
+/* Literature */
+#lit {}
+
+#lit p {
+    text-align: left;
+    color: black;
+}
+
+#lit div {
+    padding-top: 1.5rem;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+#lit div p:first-child:first-letter {
+    color: BROWN;
+    float: left;
+    font-size: 3em;
+    margin: .1em .5em 0 .1em;
+    line-height: .65em;
+    padding: .25em .4em;
+    background-color: #FFF2CC;
+    border: 2px groove #1B4E8F;
+    border-radius: 10px;
 }
