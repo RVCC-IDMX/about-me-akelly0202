@@ -27,6 +27,7 @@ h1 {
 
 header {
     text-align: center;
+
 }
 
 #hero,
@@ -284,4 +285,64 @@ p {
         text-align: center;
         margin-top: .75rem;
     }
+}
+
+/*Contact Form*/
+
+#formelements {
+    display: grid;
+    row-gap: .5em;
+}
+
+#contact {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+Fieldset {
+    border: none;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+Legend {
+
+    display: none;
+}
+
+#contact Input,
+#contact textarea,
+#contact select,
+#contact button {
+    Padding: .5em;
+    Font-size: 1em;
+}
+
+#contact ul {
+    List-style: none;
+    Padding: 0px;
+}
+
+#contact li {
+    Margin: 1rem;
+}
+
+#contact button {
+    display: block;
+    margin: 1.5rem auto 0;
+    padding: 0.6rem 1.8rem;
+    background-color: #1B4E8F;
+    color: #ffffff;
+    border: none;
+    border-radius: 500px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
 }
