@@ -86,24 +86,39 @@ p {
 }
 
 #bio p {
-    margin: 1rem 0;
-    text-align: center;
+    max-width: 90%;
+    margin: 1.5rem auto;
+    text-align: left;
     line-height: 1.6;
 }
 
 /* hobbies */
+
+#hobbies p {
+    text-align: left;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    line-height: 1.6;
+}
+
+#hobbies ul {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    list-style-type: square;
+}
+
 
 #hobbies {
     background-color: #FFF8D6;
     border-left: 6px solid #1B4E8F;
     border-radius: 6px;
     padding: 1.5rem;
-    width: 60%;
-    margin: 2rem auto;
+    width: 90%;
+    margin: 4rem auto;
     text-align: left;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    box-sizing: border-box;
 }
 
 #hobbies h2 {
@@ -146,11 +161,13 @@ p {
 #lit p {
     text-align: left;
     color: black;
+    margin: 1rem 1.5rem;
+    line-height: 1.6;
 }
 
 #lit div {
     padding-top: 1.5rem;
-    max-width: 100rem;
+    max-width: 90%;
     margin: 0 auto;
 }
 
@@ -175,7 +192,15 @@ p {
 
 /* Tablet and up */
 
-@media screen and (min-width: 60em) {
+@media screen and (min-width: 48em) {
+
+    #bio p {
+        max-width: 80%;
+    }
+
+    #hobbies {
+        width: 60%;
+    }
 
     body {
         margin: 2rem;
@@ -258,7 +283,7 @@ p {
         font-size: 1.25rem;
     }
 
-    @media screen and (min-width: 100em) {
+    @media screen and (min-width: 60em) {
         #gallery {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
