@@ -79,14 +79,13 @@ p {
 #bio {
     margin-top: 5rem;
     margin-bottom: 5rem;
-    max-width: 42ch;
+    width: 80%;
     margin: 0 auto;
     padding: 0 1rem;
 
 }
 
 #bio p {
-    max-width: 90%;
     margin: 1.5rem auto;
     text-align: left;
     line-height: 1.6;
@@ -195,7 +194,7 @@ p {
 @media screen and (min-width: 48em) {
 
     #bio p {
-        max-width: 80%;
+        max-width: 85%;
     }
 
     #hobbies {
@@ -211,7 +210,7 @@ p {
         display: grid;
         grid-template-columns: 2fr 1fr;
         align-items: center;
-        gap: 1rem;
+        gap: 2rem;
         margin: 2rem 0;
     }
 
@@ -221,6 +220,10 @@ p {
         height: 600px;
         object-fit: cover;
         display: block;
+        /* margin-left: 1.5rem; */
+        margin: 1em;
+        border-radius: 6px;
+
     }
 
     #gallery figure>figcaption {
@@ -230,7 +233,8 @@ p {
         align-items: center;
         text-align: center;
         font-size: 1.5rem;
-        margin-left: 1rem;
+        padding: 0 1rem;
+
     }
 
     #lit div {
@@ -248,7 +252,60 @@ p {
     text-align: left;
 }
 
+@media screen and (min-width: 60em) {
+
+
+    #gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+        align-items: start;
+        padding: 0 2rem;
+        box-sizing: border-box;
+
+    }
+
+    #gallery figure {
+        display: block;
+        margin: 0;
+        text-align: center;
+    }
+
+    #gallery figure>img {
+        width: 100%;
+        height: 425px;
+        object-fit: cover;
+        display: block;
+        margin-left: 0;
+        border-radius: 6px;
+    }
+
+    #gallery>h2 {
+        grid-column: 1 / -1;
+    }
+
+    #gallery>hr {
+        display: none;
+    }
+
+    #gallery img {
+        height: 425px;
+        object-fit: cover;
+    }
+}
+
+#gallery>figure>figcaption {
+    display: block;
+    text-align: center;
+    margin-top: .75rem;
+}
+}
+
 @media screen and (min-width: 80em) {
+    #bio p {
+        max-width: 75%;
+    }
+
     #gallery {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -282,35 +339,9 @@ p {
         margin-top: .75rem;
         font-size: 1.25rem;
     }
-
-    @media screen and (min-width: 60em) {
-        #gallery {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 2rem;
-            align-items: start;
-        }
-
-        #gallery>h2 {
-            grid-column: 1 / -1;
-        }
-
-        #gallery>hr {
-            display: none;
-        }
-
-        #gallery img {
-            height: 425px;
-            object-fit: cover;
-        }
-    }
-
-    #gallery>figure>figcaption {
-        display: block;
-        text-align: center;
-        margin-top: .75rem;
-    }
 }
+
+
 
 /*Contact Form*/
 
