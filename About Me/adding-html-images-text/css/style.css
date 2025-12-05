@@ -61,6 +61,7 @@ footer {
     margin-bottom: 1rem;
     display: block;
     margin: 0 auto 1rem;
+    border-radius: 10px;
 }
 
 #hero p {
@@ -164,8 +165,6 @@ p {
     margin: 3rem auto;
     background-color: #1B4E8F;
 }
-
-
 
 /* Literature */
 
