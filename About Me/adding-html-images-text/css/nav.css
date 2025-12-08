@@ -24,21 +24,38 @@ main {
 /* navbar */
 
 .navbar {
-    background-color: #333;
-    color: whitesmoke;
+
+    /* /* background-color: #f8f5f0;
+    color: black;
     display: flex;
     flex-direction: column;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    padding: 1rem;
+    padding: 1rem; */
+    /* font-size: 1.5rem;
+    margin-bottom: 1rem; */
+    /* padding: 0.5rem 1.5rem; */
+    /* padding: 2rem; */
+
+    background-color: #f8f5f0;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    /* padding: 0.75rem 1.5rem; */
+    padding: 0.6rem 1rem;
+    font-size: 1.4rem;
+    row-gap: 0.75rem;
 }
+
 
 /* logo */
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: .75rem;
+    /* padding: 0; */
 }
 
 .logo img {
@@ -49,7 +66,10 @@ main {
 .logo h1 {
     font-size: 2rem;
     margin: 0;
-    padding-bottom: 4rem;
+    line-height: 1;
+    padding-bottom: 1rem;
+    /* line-height: 1.1; */
+
 
 }
 
@@ -66,24 +86,80 @@ main {
  style all a tags in header 
  and then on hover
 */
+.navbar-links {
+    display: none;
+    width: 100%;
+    /* margin-top: 1rem; */
+    background-color: #f8f5f0;
+    /* width: 100%;
+    margin-top: 1rem; */
+}
+
+.navbar-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.navbar-links li {
+    padding: 0.4rem 0;
+}
 
 .navbar-links a {
-    color: whitesmoke;
-    background-color: #333;
+    color: black;
+    background-color: #f8f5f0;
     font-size: 1.8rem;
-    padding: 1rem 1.25rem;
-    letter-spacing: 2px;
+    /* padding: 0.75rem 1.25rem; */
+    padding: 0.4rem 0.75rem;
+    letter-spacing: 1px;
     text-decoration: none;
-    display: block;
-    /* display: inline-block; */
+    /* display: block; */
+    display: inline-block;
 }
 
 .navbar-links a:hover,
 .navbar-links a:focus {
-    color: #333;
-    background-color: whitesmoke;
+    color: #1B4E8F;
+    background-color: #f9f8f6;
+    font-weight: 700;
     border-radius: 10px;
     outline: none;
+
+}
+
+/* HAMBURGER BUTTON (mobile) */
+
+.hamburger {
+    display: block;
+    /* margin-left: auto; */
+    background: none;
+    border: 2px solid #1B4E8F;
+    border-radius: 8px;
+    padding: 0.4rem 0.5rem;
+    /* makes the click-area bigger */
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+
+}
+
+.hamburger .bar {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: #1B4E8F;
+    border-radius: 2px;
+    margin: 4px 0;
+    transition: 0.3s ease;
+}
+
+
+/* when menu is opened on mobile */
+.navbar-links.active {
+    display: block;
 }
 
 /* 
@@ -93,25 +169,45 @@ such that no text wraps
 */
 
 @media screen and (min-width: 60rem) {
-    .navbar-links {
-        display: flex;
-        gap: 2rem;
-        margin: 0;
-    }
 
     .navbar {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        /* flex-direction: row;
+            justify-content: space-between;
+            align-items: center; */
+        padding: .75rem 2rem;
+    }
+
+    .navbar-links {
+        /* display: flex; */
+        /* gap: 2rem;
+        margin: 0;
+        display: block;
+        width: auto;
+        margin-top: 0; */
+        display: block;
+        /* always show links */
+        width: auto;
+        margin-top: transparent;
     }
 
     .navbar ul {
         display: flex;
-        justify-content: space-between;
+        /* justify-content: space-between; */
+        gap: 2rem;
     }
 
+    .navbar-links li {
+        padding: 0;
+    }
+
+
     .logo img {
-        height: 4rem;
+        height: 3.5rem;
+    }
+
+    /* Hide hamburger on large screens */
+    .hamburger {
+        display: none;
     }
 
 }

@@ -5,6 +5,7 @@ body {
     font-size: 16pt;
     margin: 1rem;
     padding: 1rem;
+
 }
 
 h2,
@@ -30,12 +31,18 @@ header {
 
 }
 
+
+
 #hero,
 footer {
     text-align: center;
     padding-top: 5rem;
 
 }
+
+/* #footer {
+    padding: 0.5rem 0 1.5rem;
+} */
 
 #hero {
     background-color: #FFF2CC;
