@@ -5,6 +5,7 @@ body {
     font-size: 16pt;
     margin: 1rem;
     padding: 1rem;
+
 }
 
 h2,
@@ -30,6 +31,8 @@ header {
 
 }
 
+
+
 #hero,
 footer {
     text-align: center;
@@ -37,8 +40,12 @@ footer {
 
 }
 
+/* #footer {
+    padding: 0.5rem 0 1.5rem;
+} */
+
 #hero {
-    background-color: #FFF2CC;
+    background-color: #FFF8D6;
     border: 2px groove #1B4E8F;
     border-radius: 10px;
     width: 50%;
@@ -61,6 +68,7 @@ footer {
     margin-bottom: 1rem;
     display: block;
     margin: 0 auto 1rem;
+    border-radius: 10px;
 }
 
 #hero p {
@@ -79,31 +87,45 @@ p {
 #bio {
     margin-top: 5rem;
     margin-bottom: 5rem;
-    max-width: 42ch;
+    width: 80%;
     margin: 0 auto;
     padding: 0 1rem;
 
 }
 
 #bio p {
-    margin: 1rem 0;
-    text-align: center;
+    margin: 1.5rem auto;
+    text-align: left;
     line-height: 1.6;
 }
 
 /* hobbies */
+
+#hobbies p {
+    text-align: left;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    line-height: 1.6;
+}
+
+#hobbies ul {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    list-style-type: square;
+}
+
 
 #hobbies {
     background-color: #FFF8D6;
     border-left: 6px solid #1B4E8F;
     border-radius: 6px;
     padding: 1.5rem;
-    width: 60%;
-    margin: 2rem auto;
+    width: 90%;
+    margin: 4rem auto;
     text-align: left;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    box-sizing: border-box;
 }
 
 #hobbies h2 {
@@ -122,10 +144,23 @@ p {
     object-fit: cover;
     display: block;
     border-radius: 6px;
+    margin-bottom: 1.25rem;
+}
+
+/* Hover effects for gallery images */
+#gallery img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+#gallery img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
 }
 
 #gallery figure {
     text-align: center;
+    overflow: hidden;
+
 }
 
 #gallery figcaption {
@@ -146,11 +181,13 @@ p {
 #lit p {
     text-align: left;
     color: black;
+    margin: 1rem 1.5rem;
+    line-height: 1.6;
 }
 
 #lit div {
     padding-top: 1.5rem;
-    max-width: 100rem;
+    max-width: 90%;
     margin: 0 auto;
 }
 
@@ -175,7 +212,15 @@ p {
 
 /* Tablet and up */
 
-@media screen and (min-width: 60em) {
+@media screen and (min-width: 48em) {
+
+    #bio p {
+        max-width: 85%;
+    }
+
+    #hobbies {
+        width: 60%;
+    }
 
     body {
         margin: 2rem;
@@ -186,7 +231,7 @@ p {
         display: grid;
         grid-template-columns: 2fr 1fr;
         align-items: center;
-        gap: 1rem;
+        gap: 2rem;
         margin: 2rem 0;
     }
 
@@ -196,6 +241,10 @@ p {
         height: 600px;
         object-fit: cover;
         display: block;
+        /* margin-left: 1.5rem; */
+        margin: 1em;
+        border-radius: 6px;
+
     }
 
     #gallery figure>figcaption {
@@ -205,7 +254,8 @@ p {
         align-items: center;
         text-align: center;
         font-size: 1.5rem;
-        margin-left: 1rem;
+        padding: 0 1rem;
+
     }
 
     #lit div {
@@ -223,7 +273,65 @@ p {
     text-align: left;
 }
 
+@media screen and (min-width: 60em) {
+
+
+    #gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+        align-items: start;
+        padding: 0 2rem;
+        box-sizing: border-box;
+
+    }
+
+    #gallery figure {
+        display: block;
+        margin: 0;
+        text-align: center;
+    }
+
+    #gallery figure>img,
+    #gallery img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        display: block;
+        object-position: center;
+        margin-left: 0;
+        border-radius: 6px;
+    }
+
+    #gallery>h2 {
+        grid-column: 1 / -1;
+    }
+
+    #gallery>hr {
+        display: none;
+    }
+
+    /* #gallery img {
+        height: 425px;
+        object-fit: cover;
+    } */
+}
+
+#gallery>figure>figcaption {
+    display: block;
+    text-align: center;
+    margin-top: .75rem;
+}
+
+
 @media screen and (min-width: 80em) {
+
+
+
+    #bio p {
+        max-width: 75%;
+    }
+
     #gallery {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -235,6 +343,7 @@ p {
         grid-column: 1 / -1;
     }
 
+
     #gallery>hr {
         display: none;
     }
@@ -242,6 +351,7 @@ p {
     #gallery>figure {
         display: block;
         margin: 0;
+        margin-bottom: 1rem;
     }
 
     #gallery>figure>img {
@@ -257,35 +367,9 @@ p {
         margin-top: .75rem;
         font-size: 1.25rem;
     }
-
-    @media screen and (min-width: 100em) {
-        #gallery {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 2rem;
-            align-items: start;
-        }
-
-        #gallery>h2 {
-            grid-column: 1 / -1;
-        }
-
-        #gallery>hr {
-            display: none;
-        }
-
-        #gallery img {
-            height: 425px;
-            object-fit: cover;
-        }
-    }
-
-    #gallery>figure>figcaption {
-        display: block;
-        text-align: center;
-        margin-top: .75rem;
-    }
 }
+
+
 
 /*Contact Form*/
 
@@ -298,7 +382,7 @@ p {
     max-width: 600px;
     margin: 2rem auto;
     padding: 2rem;
-    background: white;
+    background: #FFF8D6;
     border-radius: 12px;
     box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
 }
